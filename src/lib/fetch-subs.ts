@@ -51,7 +51,7 @@ async function initializeProcessors(mode: Mode) {
   }
 }
 
-function createTokenizer(dicPath = "/node_modules/kuromoji/dict") {
+function createTokenizer(dicPath = "/dict") {
   return new Promise<kuromoji.Tokenizer<kuromoji.IpadicFeatures>>((resolve, reject) => {
     kuromoji.builder({ dicPath })
       .build((err, tokenizer) => {
