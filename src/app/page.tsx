@@ -95,7 +95,6 @@ export default function Home() {
     </div>
   );
 
-
   const animes = data?.Page?.media || [];
 
   return (
