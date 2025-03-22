@@ -1,9 +1,6 @@
 import AnimeData from "@/app/info/[id]/_components/data";
 
-export default async function Info({ params }: { params: { id: string } }) {
-    const resolvedParams = await params;
-    const id = resolvedParams.id;
-
+export default async function Info({ params: { id } }: { params: { id: string } }) {
     return (
       <div>
         <AnimeData id={id} />
