@@ -1,5 +1,4 @@
-import AnimeData from "@/app/info/[id]/_components/anime-data";
-import Files from "@/app/watch/[id]/[ep]/_components/files";
+import Subs from "@/app/subs/[id]/[ep]/_components/subs";
 
 export default async function Watch({ params }: { params: { id: string, ep: string } }) {
     const resolvedParams = await params;
@@ -7,8 +6,8 @@ export default async function Watch({ params }: { params: { id: string, ep: stri
     const ep = resolvedParams.ep;
 
     return (
-      <div className="flex flex-col">
-        <Files id={id} ep={ep} />
+      <div className="container mx-auto px-4 py-6">
+        <Subs id={id} ep={ep} />
       </div>
     );
 }

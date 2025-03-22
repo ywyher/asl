@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ReactQueryProvider } from "@/lib/react-query";
 import ApolloProvider from "@/lib/apollo-provider";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,7 @@ export default function RootLayout({
               disableTransitionOnChange
             >
               <main>{children}</main>
+              <Toaster theme="dark" />
             </ThemeProvider>
           </ReactQueryProvider>
         </ApolloProvider>

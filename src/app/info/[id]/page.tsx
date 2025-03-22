@@ -1,4 +1,4 @@
-import AnimeData from "@/app/info/[id]/_components/anime-data";
+import AnimeData from "@/app/info/[id]/_components/data";
 
 export default async function Info({ params }: { params: { id: string } }) {
     const resolvedParams = await params;
