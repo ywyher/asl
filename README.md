@@ -1,1 +1,1 @@
-> Animelon alternative
+An interactive anime subtitle explorer that lets users select their favorite anime and episode, view subtitles, and instantly look up Japanese words using the JMdict dictionary for quick translation and intuitive learning experience.
