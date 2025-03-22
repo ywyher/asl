@@ -14,6 +14,7 @@ Select an anime and episode to enjoy:
 
 # What's missing
 - [ ] Hover translation functionality
+- [ ] ass/vtt support
 
 # Credits
 - [Jimaku](https://jimaku.cc/) – For their excellent API and subtitle data
