@@ -1,6 +1,8 @@
 import AnimeData from "@/app/info/[id]/_components/data";
 
-export default async function Info({ params }: { params: { id: string } }) {
+type Params = Promise<{ id: string }>
+
+export default async function Info({ params }: { params: Params }) {
   const { id } = await params
   
   return (

@@ -1,6 +1,8 @@
 import Subs from "@/app/subs/[id]/[ep]/_components/subs";
 
-export default async function Watch({ params }: { params: { id: string, ep: string } }) {
+type Params = Promise<{ id: string, ep: string }>
+
+export default async function Watch({ params }: { params: Params }) {
     const { id, ep } = await params;
 
     return (
