@@ -9,3 +9,9 @@ so what other solutions ?
 JSON search library like fuse.js for example or what exactly
 
 i have also read about converting it to .gz or something like that
+
+-------------------------------------------------------------------
+
+JSL -> upload a local sub file and we show the subs and allow for search
+
+ASL -> a user choose an anime then an episode then we fetch files and show it and allow for search
