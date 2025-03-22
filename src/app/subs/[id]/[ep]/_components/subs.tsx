@@ -83,15 +83,16 @@ export default function Subs({ id, ep }: { id: string, ep: string }) {
     const hasError = searchError || filesError || subsError;
     const errorMessage = searchError?.message || filesError?.message || subsError?.message;
 
+    useEffect(() => {
+        refetch()
+    }, [selectedFile, refetch])
+
     if (hasError) {
         return (
             <Indicator color="red" message={errorMessage || ""} type="error" />
         );
     }
 
-    useEffect(() => {
-        refetch()
-    }, [selectedFile, refetch])
 
     return (
         <div className="flex flex-col gap-3">
