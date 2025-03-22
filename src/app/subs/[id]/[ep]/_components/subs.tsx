@@ -74,7 +74,7 @@ export default function Subs({ id, ep }: { id: string, ep: string }) {
             const selectedFile = selectFile(filteredFiles);
             setSelectedFile(selectedFile);
         }
-    }, [filesData, refetch]);
+    }, [filesData]);
 
     // Consolidated loading state
     const isLoading = isLoadingSearch || isLoadingFiles || isLoadingSubs;
@@ -91,7 +91,7 @@ export default function Subs({ id, ep }: { id: string, ep: string }) {
 
     useEffect(() => {
         refetch()
-    }, [selectedFile])
+    }, [selectedFile, refetch])
 
     return (
         <div className="flex flex-col gap-3">

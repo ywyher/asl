@@ -6,7 +6,7 @@ import Kuroshiro from "kuroshiro";
 import KuromojiAnalyzer from "kuroshiro-analyzer-kuromoji";
 
 interface KuroshiroInstance {
-  init: (analyzer: any) => Promise<void>;
+  init: (analyzer: unknown) => Promise<void>;
   convert: (text: string, options?: { to?: string; mode?: string }) => Promise<string>;
 }
 
@@ -86,14 +86,14 @@ async function processSubsForNonJapaneseMode(subs: Sub[], mode: Mode) {
   return Promise.all(
     subs.map(async sub => {
       // Convert to the target script
-      const convertedContent = await kuroshiro?.convert(sub.content, { to: mode });
+      const convertedContent = await kuroshiro!.convert(sub.content, { to: mode });
       
       // Return with both conversion and tokenization
       return {
         ...sub,
         original_content: sub.content,
         content: convertedContent,
-        tokens: tokenizer!.tokenize(convertedContent || "")
+        tokens: tokenizer!.tokenize(convertedContent)
           .filter(token => token.surface_form !== ' ' && token.surface_form !== '　')
       };
     })
