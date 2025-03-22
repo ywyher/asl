@@ -9,7 +9,7 @@ Select an anime and episode to enjoy:
 - Instant English translations on hover using the JMdict dictionary
 
 # What's missing
-    Hover translation functionality
+- [] Hover translation functionality
 
 # Credits
 - [Jimaku](https://jimaku.cc/) – For their excellent API and subtitle data
