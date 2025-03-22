@@ -13,6 +13,7 @@ import { Dispatch, SetStateAction, useState } from "react";
 import { Check, FileText, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { toast } from "sonner";
 
 export default function Files({ files, setSelectedFile, selectedFile }: { 
     files: File[];
@@ -31,6 +32,7 @@ export default function Files({ files, setSelectedFile, selectedFile }: {
         // Close dialog after selection
         setTimeout(() => {
             setOpen(false);
+            toast.message("File updated!")
             // Reset loading state after dialog closes
             setTimeout(() => setLoading(null), 300);
         }, 500);
