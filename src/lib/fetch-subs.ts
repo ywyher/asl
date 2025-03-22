@@ -5,9 +5,14 @@ import Kuroshiro from "kuroshiro";
 // @ts-expect-error - KuromojiAnalyzer lacks proper TypeScript typings
 import KuromojiAnalyzer from "kuroshiro-analyzer-kuromoji";
 
+interface KuroshiroInstance {
+  init: (analyzer: any) => Promise<void>;
+  convert: (text: string, options?: { to?: string; mode?: string }) => Promise<string>;
+}
+
 // Global instances to avoid re-initialization
 let tokenizer: kuromoji.Tokenizer<kuromoji.IpadicFeatures> | null = null;
-let kuroshiro: any = null;
+let kuroshiro: KuroshiroInstance | null = null;
 
 export async function fetchSub(url: string) {
   const response = await fetch(url);
@@ -47,7 +52,7 @@ async function initializeProcessors(mode: Mode) {
   if (!kuroshiro && mode != 'japanese') {
     kuroshiro = new Kuroshiro();
     const analyzer = new KuromojiAnalyzer({ dictPath: "/dict" });
-    await kuroshiro.init(analyzer);
+    await kuroshiro?.init(analyzer);
   }
 }
 
@@ -81,14 +86,14 @@ async function processSubsForNonJapaneseMode(subs: Sub[], mode: Mode) {
   return Promise.all(
     subs.map(async sub => {
       // Convert to the target script
-      const convertedContent = await kuroshiro.convert(sub.content, { to: mode });
+      const convertedContent = await kuroshiro?.convert(sub.content, { to: mode });
       
       // Return with both conversion and tokenization
       return {
         ...sub,
         original_content: sub.content,
         content: convertedContent,
-        tokens: tokenizer!.tokenize(convertedContent)
+        tokens: tokenizer!.tokenize(convertedContent || "")
           .filter(token => token.surface_form !== ' ' && token.surface_form !== '　')
       };
     })
@@ -97,7 +102,7 @@ async function processSubsForNonJapaneseMode(subs: Sub[], mode: Mode) {
 
 function cleanContent(content: string) {
   // Remove {\\an8}
-  let cleanedContent = content.replace(/\{\\an\d+\}/g, '');
+  const cleanedContent = content.replace(/\{\\an\d+\}/g, '');
   
   return cleanedContent;
 }

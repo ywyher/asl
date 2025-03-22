@@ -68,13 +68,13 @@ export default function Subs({ id, ep }: { id: string, ep: string }) {
     })
 
     useEffect(() => {
-        if(filesData) {
-            const filteredFiles = filterFiles(filesData)
-            setFilteredFiles(filteredFiles)
-            const selectedFile = selectFile(filteredFiles)
-            setSelectedFile(selectedFile)
+        if (filesData) {
+            const filteredFiles = filterFiles(filesData);
+            setFilteredFiles(filteredFiles);
+            const selectedFile = selectFile(filteredFiles);
+            setSelectedFile(selectedFile);
         }
-    }, [filesData]);
+    }, [filesData, refetch]);
 
     // Consolidated loading state
     const isLoading = isLoadingSearch || isLoadingFiles || isLoadingSubs;

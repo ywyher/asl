@@ -37,10 +37,6 @@ interface PageData {
   media: AnimeData[];
 }
 
-interface QueryResponse {
-  Page: PageData;
-}
-
 const GET_ANIMES = gql`
   query ($search: String!) {
     Page {

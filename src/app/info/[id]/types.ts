@@ -1,3 +1,5 @@
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
+
 // types.ts
 import { ApolloError } from "@apollo/client"
 
@@ -24,7 +26,7 @@ export interface Anime {
 export interface AnimeLayoutProps {
   bannerImage?: string
   title: string
-  router: any
+  router: AppRouterInstance
   children: React.ReactNode
 }
 
@@ -49,7 +51,7 @@ export interface AnimeDescriptionProps {
 export interface AnimeEpisodesProps {
   episodes: number[]
   animeId: string
-  router: any
+  router: AppRouterInstance
 }
 
 export interface AnimeErrorProps {
