@@ -5,7 +5,7 @@ An interactive anime subtitle explorer that allows users to select their favorit
 
 Select an anime and episode to enjoy:
 - Automatic subtitle fetching
-- Wrong subtitle fetched ? no worries select the correct one via a simple dialog 
+- Wrong subtitle fetched ? no worries select the correct one using a user friendly dialog 
 - Support for Japanese, Hiragana, Katakana, and Romaji
 - Instant English translations on hover using the JMdict dictionary
 
