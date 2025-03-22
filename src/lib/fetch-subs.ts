@@ -1,8 +1,8 @@
-import { Format, Mode, Sub, Token } from "@/app/types";
+import { Format, Mode, Sub } from "@/app/types";
 import * as kuromoji from "kuromoji";
-// @ts-ignore
+// @ts-expect-error - Kuroshiro lacks proper TypeScript typings
 import Kuroshiro from "kuroshiro";
-// @ts-ignore
+// @ts-expect-error - KuromojiAnalyzer lacks proper TypeScript typings
 import KuromojiAnalyzer from "kuroshiro-analyzer-kuromoji";
 
 // Global instances to avoid re-initialization

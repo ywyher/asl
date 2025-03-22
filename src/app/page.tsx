@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import AnimeCard, { AnimeCardSkeleton } from "@/components/anime-card";
-import { gql, useLazyQuery, useQuery } from "@apollo/client";
+import { gql, useLazyQuery } from "@apollo/client";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";

@@ -7,8 +7,7 @@ import Dialogue from "@/components/Dialogue";
 import { parseSubToJson } from "@/lib/fetch-subs";
 import { useQuery } from "@tanstack/react-query"
 import { useEffect, useState } from "react"
-import { Skeleton } from "@/components/ui/skeleton";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Indicator } from "@/components/indicator";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
