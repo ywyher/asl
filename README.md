@@ -1,3 +1,6 @@
+> [!warning]
+> the translation functionality is yet to be implemented for now you can use [yomitan](https://yomitan.wiki/) instead
+
 # What is it?
 An interactive anime subtitle explorer that allows users to select their favorite anime and episode, view subtitles, and instantly look up Japanese words using the JMdict dictionary for seamless translation and immersive learning.
 
