@@ -64,7 +64,7 @@ const GET_ANIMES = gql`
 `;
 
 export default function Home() {
-  const [searchQuery, setSearchQuery] = useState<string>("steins;gate");
+  const [searchQuery, setSearchQuery] = useState<string>("");
   
   const [getAnime ,{ data, loading, error }] = useLazyQuery<{ Page: PageData }>(GET_ANIMES, {
     variables: {
