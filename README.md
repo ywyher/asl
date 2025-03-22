@@ -5,13 +5,12 @@
 An interactive anime subtitle explorer that allows users to select their favorite anime and episode, view subtitles, and instantly look up Japanese words using the JMdict dictionary for seamless translation and immersive learning.
 
 # How it works
-
 Select an anime and episode to enjoy:
 - Automatic subtitle fetching
 - Wrong subtitle fetched ? no worries select the correct one using a user friendly dialog 
 - Support for Japanese, Hiragana, Katakana, and Romaji
-- 
-# What's missing
+
+# Under Construction
 - [ ] Translation on hover functionality
 - [ ] ass/vtt support
 
