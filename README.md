@@ -13,11 +13,9 @@ Select an anime and episode to enjoy:
 - Instant English translations on hover using the JMdict dictionary
 
 # What's missing
-- [ ] Hover translation functionality
+- [ ] Translation on hover functionality
 - [ ] ass/vtt support
 
 # Credits
 - [Jimaku](https://jimaku.cc/) – For their excellent API and subtitle data
-- [JMdict Simplified](https://github.com/scriptin/jmdict-simplified) Simplified – For providing JMdict in JSON format instead of XML
-- [JMdict](https://www.edrdg.org/wiki/index.php/Main_Page) – For their extensive and well-maintained dictionaries
 - [ywyh (Me)](https://github.com/ywyher) – for being goated
