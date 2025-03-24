@@ -10,7 +10,7 @@ Select an anime and episode to enjoy:
 - Automatic subtitle fetching
 - Wrong subtitle fetched ? no worries select the correct one using a user friendly dialog 
 - Support for Japanese, Hiragana, Katakana, and Romaji
-- 
+
 # What's missing
 - [ ] Translation on hover functionality
 - [ ] ass/vtt support
